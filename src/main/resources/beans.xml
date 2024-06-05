@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="co.pragra.learning.springiocjune012024.Samsung" name="samsung25" init-method="init" destroy-method="destroy">
+        <constructor-arg name="booking" ref="cineplex"></constructor-arg>
+        <property name="model" value="S25"></property>
+    </bean>
+
+    <bean class="co.pragra.learning.springiocjune012024.Samsung" name="samsung26">
+        <constructor-arg name="booking" ref="landmark"></constructor-arg>
+        <property name="model" value='#{"Saddsees26".substring(3)}'></property>
+    </bean>
+
+    <bean class="co.pragra.learning.springiocjune012024.Cineplex" name="cineplex"></bean>
+    <bean class="co.pragra.learning.springiocjune012024.Landmark" name="landmark"></bean>
+
+
+</beans>
+
